@@ -1,0 +1,41 @@
+.cl-button {
+    &__contained {
+        height: 48px;
+        background-color: $colorContainedPrimaryBackground;
+
+        &:hover {
+            &:after {
+                box-shadow:
+                    0 4px 16px 0 rgba(0, 0, 0, 0.04), 0 2px 4px 0 rgba(0, 0, 0, 0.04), 0 0 4px 0 rgba(0, 0, 0, 0.04);
+            }
+        }
+
+        &:disabled {
+            background-color: $colorBlack8;
+
+            span {
+                color: $colorBlack16;
+            }
+
+            cl-icon {
+                .icon {
+                    background-color: $colorBlack16;
+                }
+            }
+        }
+
+        &--secondary {
+            background-color: $colorBlack8;
+
+            span {
+                color: $colorBlack32;
+            }
+
+            cl-icon {
+                .icon {
+                    background-color: $colorBlack32;
+                }
+            }
+        }
+    }
+}

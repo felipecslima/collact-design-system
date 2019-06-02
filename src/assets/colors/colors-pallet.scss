@@ -1,0 +1,127 @@
+
+$colors: (
+  pink: #de5780,
+  purple: #9c81b1,
+  blue: #78b0c8,
+  teal: #36c1b4,
+  green: #37bc92,
+  yellow: #e1c322,
+  orange: #ff6d23,
+  red: #f24340,
+  red-collact: #ee003e,
+  black: #000000,
+  gray: #a6a6a6,
+);
+$levels: 2, 3, 8, 16, 24, 32, 40, 56, 72, 88, 100;
+
+
+$blackWhiteShades: (
+  '#fafafa',
+  '#f7f7f7',
+  '#ebebeb',
+  '#d6d6d6',
+  '#adadad',
+  '#707070',
+  '#474747',
+  '#1f1f1f',
+  '#000000'
+);
+
+$shadeLevels: (2: 0.02, 3: 0.03, 8: 0.08, 16: 0.16, 32: 0.32, 56: 0.56, 72: 0.72, 88:0.88, 100:1);
+
+@each $shade in $blackWhiteShades {
+.black {
+    &__background {
+    @each $level, $percent in $shadeLevels {
+      &--#{$level} {
+        background-color: rgba(0, 0, 0, $percent);
+      }
+    }
+  }
+    &__color {
+      @each $level, $percent in $shadeLevels {
+        &--#{$level} {
+          color: rgba(0, 0, 0, $percent);
+        }
+      }
+  }
+}
+.white {
+  &__background {
+      @each $level, $percent in $shadeLevels {
+        &--#{$level} {
+          background-color: rgba(255, 255, 255, $percent);
+        }
+      }
+    }
+    &__color {
+      @each $level, $percent in $shadeLevels {
+        &--#{$level} {
+          color: rgba(255, 255, 255, $percent);
+        }
+      }
+    }
+  }
+}
+
+
+@each $color, $hexa in $colors {
+  .#{$color} {
+    &__background {
+      &--base {
+        background-color: $hexa
+      }
+      &--lighten {
+        @each $level in $levels {
+          &-#{$level} {
+            background-color: lighten($hexa, $level)
+          }
+        }
+      }
+      &--darken {
+        @each $level in $levels {
+          &-#{$level} {
+            background-color: darken($hexa, $level)
+          }
+        }
+      }
+    }
+    &__color {
+      &--base {
+        color: $hexa;
+      }
+      &--lighten {
+        @each $level in $levels {
+          &-#{$level} {
+            color: lighten($hexa, $level)
+          }
+        }
+      }
+      &--darken {
+        @each $level in $levels {
+          &-#{$level} {
+            color: darken($hexa, $level)
+          }
+        }
+      }
+    }
+  }
+}
+
+.font {
+  &--light {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  &--dark {
+    color: #FFF;
+  }
+}
+
+.background {
+  &--light {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  &--dark {
+    background-color: #FFF;
+  }
+}

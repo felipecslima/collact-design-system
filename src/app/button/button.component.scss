@@ -1,0 +1,13 @@
+$colorBlack8:rgba(0, 0, 0, 0.08);
+$colorBlack16:rgba(0, 0, 0, 0.16);
+$colorBlack32: rgba(0, 0, 0, 0.32);
+$colorBlack56: rgba(0, 0, 0, 0.56);
+$colorPrimary: #41918a;
+$colorContainedPrimaryBackground: #91e0d9;
+@import '../icon/icon.component.scss';
+@import './button.style/button.base.scss';
+@import './button.style/button.contained.scss';
+@import './button.style/button.outline.scss';
+@import './button.style/button.icon.base.scss';
+@import './button.style/button.icon.outline.scss';
+@import './button.style/button.icon.contained.scss';

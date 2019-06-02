@@ -1,0 +1,25 @@
+  .cl-button {
+      &__icon {
+          &__contained {
+              height: 48px;
+              width: 56px;
+              padding: 0;
+              justify-content: center;
+              &:disabled {
+                  cl-icon {
+                      .icon {
+                          background-color: $colorBlack16;
+                      }
+                  }
+              }
+
+              &--secondary {
+                  cl-icon {
+                      .icon {
+                          background-color: $colorBlack32;
+                      }
+                  }
+              }
+          }
+      }
+  }

@@ -1,0 +1,91 @@
+.cl-button {
+    height: 40px;
+    border-radius: 4px;
+    border: none;
+    background: transparent;
+    padding: 0 16px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        &:after {
+            content: "";
+            border-radius: 4px;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.03);
+        }
+    }
+
+    cl-icon+span {
+        margin-left: 8px;
+    }
+
+    span+cl-icon {
+        margin-left: 8px;
+    }
+
+    span {
+        color: $colorPrimary;
+        font-size: 16px;
+        font-weight: 600;
+        position: relative;
+        z-index: 1;
+    }
+
+    cl-icon {
+        position: relative;
+        z-index: 1;
+
+        .icon {
+            background-color: $colorPrimary;
+        }
+    }
+
+    &:disabled {
+
+        &:hover {
+            &:after {
+                display: none;
+            }
+        }
+
+        cursor: initial;
+
+        span {
+            color: $colorBlack16;
+        }
+
+        cl-icon {
+            .icon {
+                background-color: $colorBlack16;
+            }
+        }
+    }
+
+    &--secondary {
+        span {
+            color: $colorBlack32;
+        }
+
+        cl-icon {
+            .icon {
+                background-color: $colorBlack32;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,48 @@
+.cl-button {
+    &__outline {
+        height: 48px;
+        background-color: transparent;
+        box-sizing: border-box;
+        border-width: 1px;
+        border-style: solid;
+        border-color: $colorBlack56;
+
+        span {
+            color: $colorBlack56;
+        }
+
+        cl-icon {
+            .icon {
+                background-color: $colorBlack56;
+            }
+        }
+
+        &:disabled {
+            border-color: $colorBlack16;
+
+            span {
+                color: $colorBlack16;
+            }
+
+            cl-icon {
+                .icon {
+                    background-color: $colorBlack16;
+                }
+            }
+        }
+
+        &--secondary {
+            border-color: $colorBlack16;
+
+            span {
+                color: $colorBlack32;
+            }
+
+            cl-icon {
+                .icon {
+                    background-color: $colorBlack32;
+                }
+            }
+        }
+    }
+}

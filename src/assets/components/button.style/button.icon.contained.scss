@@ -7,6 +7,10 @@
               border-radius: 4px;
               justify-content: center;
 
+              .cl-icon {
+                  background-color: $colorBlack32;
+              }
+
               &:hover {
                   &:after {
                       border-radius: 4px;

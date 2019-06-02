@@ -7,6 +7,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class ButtonComponent implements OnInit {
 
+  public icon = 'cl-edit';
+
   constructor() { }
 
   ngOnInit() {

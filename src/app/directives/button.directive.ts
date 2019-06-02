@@ -1,4 +1,4 @@
-import { Directive, HostBinding } from '@angular/core';
+import { Directive, HostBinding, OnInit, ElementRef } from '@angular/core';
 
 const button = {
   'button': 'cl-button',
@@ -17,6 +17,12 @@ const button = {
   'iconOutline': 'cl-button cl-button__outline cl-button__icon cl-button__icon__outline',
   'iconOutlineSecondary': 'cl-button cl-button__outline cl-button__outline--secondary cl-button__icon cl-button__icon__outline cl-button__icon__outline--secondary',
 };
+
+
+
+const setWhiteLabel = (nativeElement) => {
+  const whitelabel = nativeElement.getAttribute('whitelabel');
+}
 
 /** Button Dense **/
 @Directive({
@@ -51,6 +57,11 @@ export class ButtonSecondaryDirective {
 export class ButtonContainedDirective {
   @HostBinding('class')
   className = button['contained'];
+
+  constructor(elementRef: ElementRef) {
+    setWhiteLabel(elementRef.nativeElement);
+  }
+
 }
 
 @Directive({

@@ -1,4 +1,4 @@
-import { Directive, HostBinding, ElementRef } from '@angular/core';
+import { Directive, HostBinding, ElementRef, Input, OnInit } from '@angular/core';
 
 const button = {
   'icon': 'cl-icon',
@@ -9,12 +9,16 @@ const button = {
 
 const baseUrl = `assets/icons/`;
 
-const setImage = (nativeElement) => {
-  const iconName = nativeElement.getAttribute('name');
-  if (iconName) {
-    const url = `-webkit-mask-image: url(${baseUrl}${iconName}.svg)`;
-    nativeElement.setAttribute('style', url);
+const setImage = (nativeElement, iconName?) => {
+  try {
+    if (iconName) {
+      const url = `-webkit-mask-image: url(${baseUrl}${iconName}.svg)`;
+      nativeElement.setAttribute('style', url);
+    }
+  } catch (error) {
+    console.error('icon.directive.setImage()', error);
   }
+
 }
 
 /** Icon **/
@@ -22,14 +26,18 @@ const setImage = (nativeElement) => {
 @Directive({
   selector: '[clIcon]'
 })
-export class ClIconDirective {
+export class ClIconDirective implements OnInit {
+  @Input() name: string;
 
-  constructor(elementRef: ElementRef) {
-    setImage(elementRef.nativeElement);
+  constructor(private elementRef: ElementRef) {
   }
 
   @HostBinding('class')
   className = button['icon'];
+
+  ngOnInit(): void {
+    setImage(this.elementRef.nativeElement, this.name);
+  }
 }
 
 
@@ -39,13 +47,16 @@ export class ClIconDirective {
   selector: '[clIconSmall]'
 })
 export class ClIconSmallDirective {
-
-  constructor(elementRef: ElementRef) {
-    setImage(elementRef.nativeElement);
+  @Input() name: string;
+  constructor(private elementRef: ElementRef) {
   }
 
   @HostBinding('class')
   className = button['iconSmall'];
+
+  ngOnInit(): void {
+    setImage(this.elementRef.nativeElement, this.name);
+  }
 }
 
 
@@ -55,13 +66,17 @@ export class ClIconSmallDirective {
   selector: '[clIconBig]'
 })
 export class ClIconBigDirective {
-
-  constructor(elementRef: ElementRef) {
-    setImage(elementRef.nativeElement);
+  @Input() name: string;
+  constructor(private elementRef: ElementRef) {
   }
+
 
   @HostBinding('class')
   className = button['iconBig'];
+
+  ngOnInit(): void {
+    setImage(this.elementRef.nativeElement, this.name);
+  }
 }
 
 /** Icon XBig**/
@@ -70,11 +85,14 @@ export class ClIconBigDirective {
   selector: '[clIconXBig]'
 })
 export class ClIconXBigDirective {
-
-  constructor(elementRef: ElementRef) {
-    setImage(elementRef.nativeElement);
+  @Input() name: string;
+  constructor(private elementRef: ElementRef) {
   }
 
   @HostBinding('class')
   className = button['iconXBig'];
+
+  ngOnInit(): void {
+    setImage(this.elementRef.nativeElement, this.name);
+  }
 }

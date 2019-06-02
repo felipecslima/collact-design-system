@@ -6,6 +6,7 @@
     </button>
 
     <button clButton>
+      <i clIcon [name]='icon'></i>
       <span>Primary</span>
     </button>
 
@@ -17,7 +18,7 @@
 
   <div fxLayout="row wrap" fxLayoutGap="16px">
     <button clButton disabled>
-      <i clIcon name='cl-active'></i>
+      <i clIcon name='cl-collact'></i>
       <span>Disabled</span>
     </button>
 
@@ -221,21 +222,21 @@
   </div>
 
   <div fxLayout="row wrap" fxLayoutGap="16px">
-      <button clButtonOutline clButtonDense [disabled]="true">
-        <span>DenseDisabled</span>
-        <i clIcon name='cl-collact'></i>
-      </button>
+    <button clButtonOutline clButtonDense [disabled]="true">
+      <span>DenseDisabled</span>
+      <i clIcon name='cl-collact'></i>
+    </button>
 
-      <button clButtonOutline clButtonDense>
-        <span>Dense Primary</span>
-        <i clIcon name='cl-collact'></i>
-      </button>
+    <button clButtonOutline clButtonDense>
+      <span>Dense Primary</span>
+      <i clIcon name='cl-collact'></i>
+    </button>
 
-      <button clButtonOutlineSecondary clButtonDense>
-        <span>Dense Secondary</span>
-        <i clIcon name='cl-collact'></i>
-      </button>
-    </div>
+    <button clButtonOutlineSecondary clButtonDense>
+      <span>Dense Secondary</span>
+      <i clIcon name='cl-collact'></i>
+    </button>
+  </div>
 
   <div fxLayout="row wrap" fxLayoutGap="16px">
     <button clButtonIconOutline disabled>

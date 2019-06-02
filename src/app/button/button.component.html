@@ -9,7 +9,7 @@
       <span>Primary</span>
     </button>
 
-    <button clButtonSecondary>
+    <button fxFlex="100" clButtonSecondary>
       <span>Secondary</span>
     </button>
 
@@ -71,16 +71,25 @@
       <cl-icon></cl-icon>
     </button>
 
-    <button clButtonIconSmall>
-      <cl-icon></cl-icon>
-    </button>
-
     <button clButtonIconSecondary>
       <cl-icon></cl-icon>
     </button>
   </div>
+  <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="16px">
+    <button clButtonIconSmall disabled>
+      <cl-icon></cl-icon>
+    </button>
 
-  <h2>Contained buttonss</h2>
+    <button clButtonIconSmall>
+      <cl-icon></cl-icon>
+    </button>
+
+    <button clButtonIconSmallSecondary>
+      <cl-icon></cl-icon>
+    </button>
+  </div>
+
+  <h2>Contained buttons</h2>
 
   <div fxLayout="row wrap" fxLayoutGap="16px">
     <button clButtonContained [disabled]="true">
@@ -126,6 +135,23 @@
 
     <button clButtonContainedSecondary>
       <span>Secondary</span>
+      <cl-icon></cl-icon>
+    </button>
+  </div>
+
+  <div fxLayout="row wrap" fxLayoutGap="16px">
+    <button clButtonContained clButtonDense [disabled]="true">
+      <span>DenseDisabled</span>
+      <cl-icon></cl-icon>
+    </button>
+
+    <button clButtonDense clButtonContained>
+      <span>Dense Primary</span>
+      <cl-icon></cl-icon>
+    </button>
+
+    <button clButtonContainedSecondary clButtonDense>
+      <span>Dense Secondary</span>
       <cl-icon></cl-icon>
     </button>
   </div>

@@ -1,29 +1,32 @@
 import { Directive, HostBinding } from '@angular/core';
 
-const classClButton = 'cl-button';
-const classClButtonSecondary = `${classClButton} ${classClButton}--secondary`;
+const button = {
+  'button': 'cl-button',
+  'dense': 'cl-button cl-button--dense',
+  'secondary': 'cl-button cl-button--secondary',
+  'contained': 'cl-button cl-button__contained',
+  'containedSecondary': 'cl-button cl-button__contained cl-button__contained--secondary',
+  'outline': 'cl-button cl-button__outline',
+  'outlineSecondary': 'cl-button cl-button__outline cl-button__outline--secondary',
+  'icon': 'cl-button cl-button__icon',
+  'iconSecondary': 'cl-button cl-button__icon cl-button__icon--secondary',
+  'iconSmall': 'cl-button cl-button__icon cl-button__icon__small',
+  'iconSmallSecondary': 'cl-button cl-button__icon cl-button__icon__small--secondary',
 
+  'iconContained': 'cl-button cl-button__contained cl-button__icon cl-button__icon__contained',
+  'iconContainedSecondary': 'cl-button cl-button__contained cl-button__contained--secondary cl-button__icon cl-button__icon__contained cl-button__icon__contained--secondary',
+  'iconOutline': 'cl-button cl-button__outline cl-button__icon cl-button__icon__outline',
+  'iconOutlineSecondary': 'cl-button cl-button__outline cl-button__outline--secondary cl-button__icon cl-button__icon__outline cl-button__icon__outline--secondary',
+};
 
-const classClButtonContained = `${classClButton} ${classClButton}__contained`;
-const classClButtonContainedSecondary = `${classClButtonContained} ${classClButton}__contained--secondary`;
-
-const classClButtonOutline = `${classClButton} ${classClButton}__outline`;
-const classClButtonOutlineSecondary = `${classClButtonOutline} ${classClButton}__outline--secondary`;
-
-const classClButtonIcon = `${classClButton} ${classClButton}__icon`;
-const classClButtonIconSecondary = `${classClButtonIcon} ${classClButton}__icon--secondary`;
-const classClButtonIconSmall = `${classClButtonIcon} ${classClButton}__icon--small`;
-
-const classClButtonIconContained = `${classClButtonContained} ${classClButton}__icon__contained`;
-const classClButtonIconContainedSecondary =
-  `${classClButtonContainedSecondary} ${classClButton}__icon__contained ${classClButton}__icon__contained--secondary`;
-
-
-  const classClButtonIconOutline = `${classClButtonOutline} ${classClButton}__icon__outline`;
-  const classClButtonIconOutlineSecondary =
-    `${classClButtonOutlineSecondary} ${classClButton}__icon__outline ${classClButton}__icon__outline--secondary`;
-
-
+/** Button Dense **/
+@Directive({
+  selector: '[clButtonDense]'
+})
+export class ButtonDenseDirective {
+  @HostBinding('style.height')
+  className = '40px';
+}
 
 /** Button **/
 @Directive({
@@ -31,7 +34,7 @@ const classClButtonIconContainedSecondary =
 })
 export class ButtonDirective {
   @HostBinding('class')
-  className = classClButton;
+  className = button['button'];
 }
 
 @Directive({
@@ -39,7 +42,7 @@ export class ButtonDirective {
 })
 export class ButtonSecondaryDirective {
   @HostBinding('class')
-  className = classClButtonSecondary;
+  className = button['secondary'];
 }
 
 /** Contained Button **/
@@ -48,7 +51,7 @@ export class ButtonSecondaryDirective {
 })
 export class ButtonContainedDirective {
   @HostBinding('class')
-  className = classClButtonContained;
+  className = button['contained'];
 }
 
 @Directive({
@@ -56,7 +59,7 @@ export class ButtonContainedDirective {
 })
 export class ButtonContainedSecondaryDirective {
   @HostBinding('class')
-  className = classClButtonContainedSecondary;
+  className = button['containedSecondary'];
 }
 
 /** Outline Button **/
@@ -66,7 +69,7 @@ export class ButtonContainedSecondaryDirective {
 
 export class ButtonOutlineDirective {
   @HostBinding('class')
-  className = classClButtonOutline;
+  className = button['outline'];
 }
 
 @Directive({
@@ -74,7 +77,7 @@ export class ButtonOutlineDirective {
 })
 export class ButtonOutlineSecondaryDirective {
   @HostBinding('class')
-  className = classClButtonOutlineSecondary;
+  className = button['outlineSecondary'];
 }
 
 /** Button Icon**/
@@ -83,7 +86,7 @@ export class ButtonOutlineSecondaryDirective {
 })
 export class ButtonIconDirective {
   @HostBinding('class')
-  className = classClButtonIcon;
+  className = button['icon'];
 }
 
 @Directive({
@@ -91,7 +94,15 @@ export class ButtonIconDirective {
 })
 export class ButtonIconSmallDirective {
   @HostBinding('class')
-  className = classClButtonIconSmall;
+  className = button['iconSmall'];
+}
+
+@Directive({
+  selector: '[clButtonIconSmallSecondary]'
+})
+export class ButtonIconSmallSecondaryDirective {
+  @HostBinding('class')
+  className = button['iconSmallSecondary'];
 }
 
 @Directive({
@@ -99,7 +110,7 @@ export class ButtonIconSmallDirective {
 })
 export class ButtonIconSecondaryDirective {
   @HostBinding('class')
-  className = classClButtonIconSecondary;
+  className = button['iconSecondary'];
 }
 
 
@@ -109,7 +120,7 @@ export class ButtonIconSecondaryDirective {
 })
 export class ButtonIconContainedDirective {
   @HostBinding('class')
-  className = classClButtonIconContained;
+  className = button['iconContained'];
 }
 
 @Directive({
@@ -117,7 +128,7 @@ export class ButtonIconContainedDirective {
 })
 export class ButtonIconContainedSecondaryDirective {
   @HostBinding('class')
-  className = classClButtonIconContainedSecondary;
+  className = button['iconContainedSecondary'];
 }
 
 
@@ -127,7 +138,7 @@ export class ButtonIconContainedSecondaryDirective {
 })
 export class ButtonIconOutlineDirective {
   @HostBinding('class')
-  className = classClButtonIconOutline;
+  className = button['iconOutline'];
 }
 
 @Directive({
@@ -135,5 +146,5 @@ export class ButtonIconOutlineDirective {
 })
 export class ButtonIconOutlineSecondaryDirective {
   @HostBinding('class')
-  className = classClButtonIconOutlineSecondary;
+  className = button['iconOutlineSecondary'];
 }

@@ -11,3 +11,10 @@ $colorContainedPrimaryBackground: #91e0d9;
 @import './button.style/button.icon.base.scss';
 @import './button.style/button.icon.outline.scss';
 @import './button.style/button.icon.contained.scss';
+
+
+.cl-button {
+    &--dense {
+        height: 40px;
+    }
+}

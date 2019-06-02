@@ -8,6 +8,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { ButtonComponent } from './button/button.component';
 import {
   ButtonDirective,
+  ButtonDenseDirective,
   ButtonSecondaryDirective,
   ButtonContainedDirective,
   ButtonContainedSecondaryDirective,
@@ -15,6 +16,7 @@ import {
   ButtonOutlineSecondaryDirective,
   ButtonIconDirective,
   ButtonIconSmallDirective,
+  ButtonIconSmallSecondaryDirective,
   ButtonIconSecondaryDirective,
   ButtonIconContainedDirective,
   ButtonIconContainedSecondaryDirective,
@@ -30,6 +32,7 @@ import {
     ButtonComponent,
 
     ButtonDirective,
+    ButtonDenseDirective,
     ButtonSecondaryDirective,
     ButtonContainedDirective,
     ButtonContainedSecondaryDirective,
@@ -37,6 +40,7 @@ import {
     ButtonOutlineSecondaryDirective,
     ButtonIconDirective,
     ButtonIconSmallDirective,
+    ButtonIconSmallSecondaryDirective,
     ButtonIconSecondaryDirective,
     ButtonIconContainedDirective,
     ButtonIconContainedSecondaryDirective,

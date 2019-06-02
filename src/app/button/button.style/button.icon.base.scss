@@ -6,6 +6,12 @@
         padding: 0;
         justify-content: center;
 
+        &:hover {
+            &:after {
+                border-radius: 50%;
+            }
+        }
+
         cl-icon {
             .icon {
                 background-color: $colorBlack56;
@@ -20,9 +26,30 @@
             }
         }
 
-        &--small {
+        &__small {
             height: 32px;
             width: 32px;
+
+            cl-icon {
+                .icon {
+                    @extend .icon--small;
+                    background-color: $colorBlack56;
+                }
+            }
+
+            &:disabled {
+                cl-icon {
+                    .icon {
+                        background-color: $colorBlack16;
+                    }
+                }
+            }
+        }
+
+        &__small--secondary {
+            height: 32px;
+            width: 32px;
+
             cl-icon {
                 .icon {
                     @extend .icon--small;

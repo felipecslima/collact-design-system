@@ -5,6 +5,13 @@
             width: 56px;
             padding: 0;
             justify-content: center;
+            border-radius: 4px;
+
+            &:hover {
+                &:after {
+                    border-radius: 4px;
+                }
+            }
 
             cl-icon {
                 .icon {

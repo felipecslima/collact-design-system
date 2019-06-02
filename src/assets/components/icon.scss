@@ -1,6 +1,12 @@
-.icon {
+.cl-icon {
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    -webkit-mask-size: 24px 24px;
+    mask-size: 24px 24px;
+    max-width: 24px;
+    min-width: 24px;
 
     &--small {
         width: 16px;
@@ -9,15 +15,6 @@
         mask-size: 16px 16px;
         max-width: 16px;
         min-width: 16px
-    }
-
-    &--normal {
-        width: 24px;
-        height: 24px;
-        -webkit-mask-size: 24px 24px;
-        mask-size: 24px 24px;
-        max-width: 24px;
-        min-width: 24px;
     }
 
     &--big {

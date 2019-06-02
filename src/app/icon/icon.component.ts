@@ -3,7 +3,6 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 @Component({
   selector: 'cl-icon',
   templateUrl: './icon.component.html',
-  styleUrls: ['./icon.component.scss'],
 })
 export class IconComponent implements OnInit {
 

@@ -31,11 +31,11 @@
         }
     }
 
-    cl-icon+span {
+    .cl-icon+span {
         margin-left: 8px;
     }
 
-    span+cl-icon {
+    span+.cl-icon {
         margin-left: 8px;
     }
 
@@ -47,13 +47,10 @@
         z-index: 1;
     }
 
-    cl-icon {
+    .cl-icon {
         position: relative;
         z-index: 1;
-
-        .icon {
-            background-color: $colorPrimary;
-        }
+        background-color: $colorPrimary;
     }
 
     &:disabled {
@@ -70,10 +67,8 @@
             color: $colorBlack16;
         }
 
-        cl-icon {
-            .icon {
-                background-color: $colorBlack16;
-            }
+        .cl-icon {
+            background-color: $colorBlack16;
         }
     }
 
@@ -82,10 +77,8 @@
             color: $colorBlack32;
         }
 
-        cl-icon {
-            .icon {
-                background-color: $colorBlack32;
-            }
+        .cl-icon {
+            background-color: $colorBlack32;
         }
     }
 

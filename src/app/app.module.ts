@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { IconComponent } from './icon/icon.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ButtonComponent } from './button/button.component';
+
 import {
   ButtonDirective,
   ButtonDenseDirective,
@@ -24,13 +25,21 @@ import {
   ButtonIconOutlineSecondaryDirective
 }
   from './directives/button.directive';
+import {
+  ClIconDirective, ClIconSmallDirective, ClIconBigDirective, ClIconXBigDirective
+} from './directives/icon.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     IconComponent,
-    ButtonComponent,
 
+    ClIconDirective,
+    ClIconSmallDirective,
+    ClIconBigDirective,
+    ClIconXBigDirective,
+
+    ButtonComponent,
     ButtonDirective,
     ButtonDenseDirective,
     ButtonSecondaryDirective,

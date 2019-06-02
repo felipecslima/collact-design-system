@@ -4,7 +4,6 @@ $colorBlack32: rgba(0, 0, 0, 0.32);
 $colorBlack56: rgba(0, 0, 0, 0.56);
 $colorPrimary: #41918a;
 $colorContainedPrimaryBackground: #91e0d9;
-@import '../icon/icon.component.scss';
 @import './button.style/button.base.scss';
 @import './button.style/button.contained.scss';
 @import './button.style/button.outline.scss';

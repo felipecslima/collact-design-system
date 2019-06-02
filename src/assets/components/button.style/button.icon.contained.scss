@@ -14,18 +14,14 @@
               }
 
               &:disabled {
-                  cl-icon {
-                      .icon {
-                          background-color: $colorBlack16;
-                      }
+                  .cl-icon {
+                      background-color: $colorBlack16;
                   }
               }
 
               &--secondary {
-                  cl-icon {
-                      .icon {
-                          background-color: $colorBlack32;
-                      }
+                  .cl-icon {
+                      background-color: $colorBlack32;
                   }
               }
           }

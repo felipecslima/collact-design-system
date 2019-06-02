@@ -12,10 +12,8 @@
             }
         }
 
-        cl-icon {
-            .icon {
-                background-color: $colorBlack56;
-            }
+        .cl-icon {
+            background-color: $colorBlack56;
         }
 
         &:disabled {
@@ -30,18 +28,13 @@
             height: 32px;
             width: 32px;
 
-            cl-icon {
-                .icon {
-                    @extend .icon--small;
-                    background-color: $colorBlack56;
-                }
+            .cl-icon {
+                background-color: $colorBlack56;
             }
 
             &:disabled {
-                cl-icon {
-                    .icon {
-                        background-color: $colorBlack16;
-                    }
+                .cl-icon {
+                    background-color: $colorBlack16;
                 }
             }
         }
@@ -50,19 +43,14 @@
             height: 32px;
             width: 32px;
 
-            cl-icon {
-                .icon {
-                    @extend .icon--small;
-                    background-color: $colorBlack32;
-                }
+            .cl-icon {
+                background-color: $colorBlack32;
             }
         }
 
         &--secondary {
-            cl-icon {
-                .icon {
-                    background-color: $colorBlack32;
-                }
+            .cl-icon {
+                background-color: $colorBlack32;
             }
         }
     }

@@ -12,7 +12,6 @@ const button = {
   'iconSecondary': 'cl-button cl-button__icon cl-button__icon--secondary',
   'iconSmall': 'cl-button cl-button__icon cl-button__icon__small',
   'iconSmallSecondary': 'cl-button cl-button__icon cl-button__icon__small--secondary',
-
   'iconContained': 'cl-button cl-button__contained cl-button__icon cl-button__icon__contained',
   'iconContainedSecondary': 'cl-button cl-button__contained cl-button__contained--secondary cl-button__icon cl-button__icon__contained cl-button__icon__contained--secondary',
   'iconOutline': 'cl-button cl-button__outline cl-button__icon cl-button__icon__outline',
